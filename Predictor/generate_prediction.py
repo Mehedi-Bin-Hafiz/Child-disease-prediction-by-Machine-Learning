@@ -40,11 +40,14 @@ checkValidationDataSet = pd.read_excel(r'../database/predictedDataSet.xlsx')
 
 print('Analysis Part')
 
-real = checkValidationDataSet['Pneumonia (+ / -)'].values
+real = checkValidationDataSet['DiseaseName'].values
 predicted = checkValidationDataSet['Prediction'].values
 print(real)
 print(predicted)
 
+print('real number of 0: ',real.tolist().count(0))
+print('predicted number of 0: ',predicted.tolist().count(0))
 print('real number of 1: ',real.tolist().count(1))
 print('predicted number of 1: ',predicted.tolist().count(1))
+
 

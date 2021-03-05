@@ -12,11 +12,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 plt.rcParams["font.family"] = "Times New Roman"
-plt.rcParams["figure.figsize"] = [9,5]
+# plt.rcParams["figure.figsize"] = [9,5]
 plt.rcParams.update({'font.size': 12})
 
 checkValidationDataSet = pd.read_excel(r'../database/predictedDataSet.xlsx')
-real = checkValidationDataSet['Disease'].values
+real = checkValidationDataSet['DiseaseName'].values
 predicted = checkValidationDataSet['Prediction'].values
 cf_matrix= confusion_matrix(real,predicted)
 group_names = ['True Neg','False Pos','False Neg','True Pos']
@@ -25,7 +25,8 @@ group_counts = ['{0:0.0f}'.format(value) for value in
 labels = [f"{v1}\n{v2}" for v1, v2 in
           zip(group_names,group_counts)]
 labels = np.asarray(labels).reshape(2,2)
-sns.heatmap(cf_matrix, annot=labels, fmt='',)
+print(labels.shape, cf_matrix.shape)
+sns.heatmap(cf_matrix, annot=True, fmt='',)
 plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.savefig("Confusion Matrix.png")

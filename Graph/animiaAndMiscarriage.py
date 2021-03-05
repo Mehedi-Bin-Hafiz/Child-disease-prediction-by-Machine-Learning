@@ -5,7 +5,6 @@ import numpy as np
 ########### vvi code for paper#########
 
 plt.rcParams["font.family"] = "Times New Roman"
-plt.rcParams["figure.figsize"] = [9,5]
 plt.rcParams.update({'font.size': 12})
 
 ########### vvi code for paper#########
