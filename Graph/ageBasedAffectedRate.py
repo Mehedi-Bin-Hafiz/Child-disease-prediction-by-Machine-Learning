@@ -48,10 +48,6 @@ age0 = [age0_disease0,age0_disease1, age0_disease2]
 age1 = [age1_disease0,age1_disease1, age1_disease2]
 age2 = [age2_disease0,age2_disease1, age2_disease2]
 
-
-
-
-
 # Create the pandas DataFrame
 index = ['Chicken Pox', 'Malaria', 'Diarrhea']
 df = pd.DataFrame({'0-3': age0,

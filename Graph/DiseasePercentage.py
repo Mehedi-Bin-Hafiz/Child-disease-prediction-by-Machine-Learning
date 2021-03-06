@@ -23,3 +23,4 @@ plt.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',)
 plt.axis('equal')
 plt.savefig('diseaseParcentage.png')
 plt.show()
+
