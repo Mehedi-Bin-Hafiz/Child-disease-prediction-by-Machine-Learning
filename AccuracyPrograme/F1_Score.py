@@ -44,14 +44,12 @@ seventypercent=0.70   # training size 30%
 #naive bayes
 print("\n########## Naive Bayes algorithm ###########")
 gnb = GaussianNB()
-
 X_train, X_test, y_train, y_test=train_test_split(x, y,test_size=thirtypercent, random_state=0)
 gnb.fit(X_train, y_train)
 #Predict the response for test dataset
 y_pred = gnb.predict(X_test)
 score=f1_score(y_test, y_pred, average='weighted')
 print("test size=30, FScore = {0:.2f}".format(100*score),"%")
-
 
 X_train, X_test, y_train, y_test=train_test_split(x, y,test_size=fourtypercent, random_state=0)
 gnb.fit(X_train, y_train)

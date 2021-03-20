@@ -41,9 +41,6 @@ age2_disease1 = len(age2_disease1)
 age2_disease2 = mainDataset.loc[ (mainDataset['AffectedAge']==2) & (mainDataset['DiseaseName'] == 2)]
 age2_disease2 = len(age2_disease2)
 
-
-
-
 age0 = [age0_disease0,age0_disease1, age0_disease2]
 age1 = [age1_disease0,age1_disease1, age1_disease2]
 age2 = [age2_disease0,age2_disease1, age2_disease2]
@@ -52,7 +49,7 @@ age2 = [age2_disease0,age2_disease1, age2_disease2]
 index = ['Chicken Pox', 'Malaria', 'Diarrhea']
 df = pd.DataFrame({'0-3': age0,
                    '4-6': age1,
-                   '6-9':age2,}, index=index)
+                   '7-9': age2}, index=index)
 df.plot.bar(rot=0)
 plt.ylabel('Numbers')
 plt.xlabel('Diseases')

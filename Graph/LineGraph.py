@@ -9,6 +9,9 @@ checkValidationDataSet = pd.read_excel(r'../database/predictedDataSet.xlsx')
 real = checkValidationDataSet['DiseaseName'].values.tolist()
 predicted = checkValidationDataSet['Prediction'].values.tolist()
 
+print(real)
+print(predicted)
+
 XandYLen = []
 for i in range(1, len(real) + 1):
     XandYLen.append(i)
