@@ -20,7 +20,8 @@ Diarrhea = DiseaseName.tolist().count(2)
 # plt.show()
 
 affected_age = mainDataset.loc[mainDataset['Disease'] == 1, 'AffectedAge']
-affected_value = affected_age.value_counts()
+dict = {0:"0 (0-3 years)", 1:" 1(4-6 years)", 2:"2 (7-9 years)"}
+affected_value = affected_age.value_counts().rename(index=dict)
 print(affected_value)
 print('affected numbers are: ',len(affected_age))
 affected_value.plot(kind = 'pie',autopct='%1.1f%%' )

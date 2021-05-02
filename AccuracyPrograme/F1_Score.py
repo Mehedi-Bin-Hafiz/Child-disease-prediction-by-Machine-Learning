@@ -26,10 +26,6 @@ print(x)
 y = MainDatabase.iloc[ : , -1].values #dependent variables
 print(y)
 
-
-
-
-
 #datauserate
 
 thirtypercent=0.30  # training size 70%
